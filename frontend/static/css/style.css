@@ -1,0 +1,106 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  padding-top: 4rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  color: white;
+  background-color: #424254;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+}
+
+.header .menuLogo {
+  padding-left: 50px;
+  font-size: 1.3rem;
+}
+
+.header .menuList {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  padding-right: 50px;
+}
+
+.header .menuList li {
+  padding: 8px 12px;
+}
+
+.header .menuList li:active {
+  background-color: #f4f4f4;
+  color: #424254;
+  border-radius: 5px;
+}
+
+/* 메인 페이지 */
+.top {
+  display: flex;
+  width: 100%;
+  height: 15rem;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.bottom {
+  display: flex;
+  width: 100%;
+  height: 15rem;
+  margin-top: 10px;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.topDiv {
+  margin-left: 10px;
+  width: 40%;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+.bottomDiv {
+  margin-left: 10px;
+  width: 30%;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding-top: 14rem;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    height: fit-content;
+  }
+  .header .menuLogo {
+    padding-left: 0px;
+  }
+  .header .menuList {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 10px;
+  }
+  .header .menuList li {
+    width: 100%;
+    text-align: center;
+  }
+  .top {
+    margin-top: 0;
+  }
+}
