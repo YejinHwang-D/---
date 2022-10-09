@@ -1,5 +1,6 @@
 import MainPage from './views/MainPage.js';
 import OtherPage from './views/OtherPage.js';
+import Program from './views/Program.js';
 
 export default function App({ $target }) {
     this.routes = [
@@ -8,6 +9,9 @@ export default function App({ $target }) {
         }},
         { path: "/other", view: async () => {
              new OtherPage({$target})
+        }},
+        { path: "/program", view: async () => {
+            new Program({$target})
         }}
     ];
 

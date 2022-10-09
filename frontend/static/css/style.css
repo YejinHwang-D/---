@@ -17,6 +17,12 @@ body {
   align-items: center;
   width: 100%;
   height: 4rem;
+  overflow: hidden;
+}
+
+.header a {
+  text-decoration: none;
+  color: #f4f4f4;
 }
 
 .header .menuLogo {
@@ -35,10 +41,46 @@ body {
   padding: 8px 12px;
 }
 
-.header .menuList li:active {
+.header .menuList li:hover .drop-down {
+  display: block;
+}
+
+.header .menuList .menucell:active {
   background-color: #f4f4f4;
   color: #424254;
   border-radius: 5px;
+}
+
+.header .menuList .menucell {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 10px solid #424254;
+}
+
+.header .menuList .drop-down {
+  list-style-type: none;
+  border: 5px solid #424254;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0.6em 1em 1em rgb(0 0 0 / 10%);
+  overflow: hidden;
+  position: fixed;
+  padding: 0;
+  margin-top: 2rem;
+  display: none;
+}
+
+.header .menuList .drop-down li {
+  border: 3px solid #424254;
+  background-color: #424254;
+}
+
+.header .menuList .drop-down li:hover {
+  background-color: #f4f4f4;
+}
+
+.header .menuList .drop-down li:hover a {
+  color: #424254;
 }
 
 /* 메인 페이지 */
@@ -102,5 +144,23 @@ body {
   }
   .top {
     margin-top: 0;
+  }
+  .header .menuList .drop-down {
+    width: 100%;
+    left: 0;
+    border: 5px solid #f4f4f4;
+  }
+  .header .menuList .drop-down li {
+    background-color: #f4f4f4;
+    border: 3px solid #f4f4f4;
+  }
+  .header .menuList .drop-down a {
+    color: #424254;
+  }
+  .header .menuList .drop-down li:hover {
+    background-color: #424254;
+  }
+  .header .menuList .drop-down li:hover a {
+    color: #f4f4f4;
   }
 }
